@@ -76,7 +76,7 @@ This project helped me practice:
 ## 🌐 Live Demo
 
 **Live Website:**
-Add your GitHub Pages live link here.
+https://parasqureshi13.github.io/Internify_task2/
 
 ## 👩‍💻 Author
 
