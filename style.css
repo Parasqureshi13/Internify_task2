@@ -1,0 +1,694 @@
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F7F2EB;
+    color: #252238;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+.header {
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 27px;
+    font-weight: 700;
+    color: #030164;
+}
+
+.logo i {
+    font-size: 25px;
+}
+
+.header p {
+    margin-top: 8px;
+    color: #77728c;
+    font-size: 14px;
+}
+
+
+/* Main */
+
+.pricing-section {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 25px 20px 60px;
+}
+
+
+/* Heading */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading span {
+    color: #030164;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h1 {
+    font-size: 38px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #77728c;
+    font-size: 15px;
+}
+
+
+/* Billing Toggle */
+
+.billing-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.billing-label {
+    font-size: 14px;
+    color: #8b879d;
+    transition: 0.3s;
+}
+
+.active-label {
+    color: #030164;
+    font-weight: 600;
+}
+
+.save-badge {
+    background: #e4dcff;
+    color: #030164;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* Toggle */
+
+.toggle {
+    position: relative;
+    width: 55px;
+    height: 29px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #c9c4d9;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 4px;
+    top: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.toggle input:checked + .slider {
+    background: #030164;
+}
+
+.toggle input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+
+/* Filters */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #ddd8ed;
+    background: white;
+    color: #6d687d;
+    padding: 9px 22px;
+    border-radius: 25px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    border-color: #030164;
+}
+
+.filter-btn.active {
+    background: #030164;
+    color: white;
+    border-color: #030164;
+}
+
+
+/* Cards */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+.pricing-card {
+    position: relative;
+    min-width: 0;
+    background: white;
+    border: 1px solid #ebe7f4;
+    border-radius: 20px;
+    padding: 30px 23px;
+    box-shadow: 0 8px 25px rgba(70, 55, 110, 0.07);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    overflow: hidden;
+}
+
+
+.pricing-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 40px rgba(70, 55, 110, 0.15);
+    border-color: #a895ee;
+}
+
+
+.pricing-card.popular {
+    border: 2px solid #030164;
+    transform: translateY(-5px);
+}
+
+.pricing-card.popular:hover {
+    transform: translateY(-13px);
+}
+
+
+/* Popular Badge */
+
+.popular-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #030164;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 0 0 0 15px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* Icons */
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.basic-icon {
+     background: #eee8ff;
+    color: #030164;
+}
+
+.standard-icon {
+    background: #eee8ff;
+    color: #030164;
+}
+
+.premium-icon {
+    background: #eee8ff;
+    color: #030164;
+}
+
+.enterprise-icon {
+   background: #eee8ff;
+    color: #030164;
+}
+
+
+/* Card Content */
+
+.pricing-card h2 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.card-description {
+    font-size: 12px;
+    color: #858094;
+    min-height: 55px;
+    line-height: 1.7;
+}
+
+
+/* Price */
+
+.price {
+    margin: 15px 0 20px;
+    display: flex;
+    align-items: baseline;
+}
+
+.currency {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.price-value {
+    font-size: 38px;
+    font-weight: 700;
+    margin-left: 2px;
+    transition: 0.25s;
+}
+
+.period {
+    font-size: 12px;
+    color: #858094;
+}
+
+
+/* Features */
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    margin-bottom: 13px;
+    color: #575265;
+}
+
+.features i {
+    color: #030164;
+}
+
+.features .disabled {
+    color: #aaa6b5;
+}
+
+.features .disabled i {
+    color: #aaa6b5;
+}
+
+
+/* Buttons */
+
+.cta-btn {
+    width: 100%;
+    border: 1px solid #030164;
+    background: white;
+    color: #030164;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.cta-btn i {
+    margin-left: 5px;
+    transition: 0.25s;
+}
+
+.cta-btn:hover {
+    background: #030164;
+    color: white;
+}
+
+.cta-btn:hover i {
+    transform: translateX(4px);
+}
+
+.popular-btn {
+    background: #030164;
+    color: white;
+}
+
+/* Hidden Cards */
+
+.pricing-card.hidden {
+    display: none;
+}
+
+
+/* Button Click Animation */
+
+.cta-btn.clicked {
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #888398;
+    font-size: 11px;
+}
+
+
+/* ========================================= */
+/* RESPONSIVE DESIGN */
+/* ========================================= */
+
+
+/* Large Laptop / Small Desktop */
+
+@media (max-width: 1150px) {
+
+    .pricing-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-9px);
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 35px 20px 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .pricing-section {
+        padding: 25px 20px 50px;
+    }
+
+    .section-heading h1 {
+        font-size: 31px;
+        line-height: 1.3;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+    .billing-wrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .pricing-card {
+        padding: 25px 20px;
+    }
+
+    .pricing-card h2 {
+        font-size: 20px;
+    }
+
+    .price-value {
+        font-size: 34px;
+    }
+
+    .card-description {
+        min-height: 65px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 30px 15px 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .logo i {
+        font-size: 21px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .pricing-section {
+        padding: 20px 15px 40px;
+    }
+
+    .section-heading {
+        margin-bottom: 20px;
+    }
+
+    .section-heading span {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .section-heading h1 {
+        font-size: 25px;
+        line-height: 1.35;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+
+    /* Billing */
+
+    .billing-wrapper {
+        gap: 8px;
+        margin: 20px 0;
+    }
+
+    .billing-label {
+        font-size: 12px;
+    }
+
+    .save-badge {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+
+
+    /* Filters */
+
+    .filters {
+        gap: 7px;
+        margin: 25px 0;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+
+    /* Cards */
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        padding: 25px 22px;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+
+
+    /* Card Content */
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+    }
+
+    .pricing-card h2 {
+        font-size: 21px;
+    }
+
+    .card-description {
+        font-size: 12px;
+        min-height: auto;
+        margin-bottom: 8px;
+    }
+
+    .price {
+        margin: 15px 0 20px;
+    }
+
+    .price-value {
+        font-size: 36px;
+    }
+
+    .features li {
+        font-size: 12px;
+    }
+
+
+    /* Popular Badge */
+
+    .popular-badge {
+        font-size: 9px;
+        padding: 6px 10px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 15px;
+        font-size: 10px;
+    }
+}
+
+
+/* Very Small Phones */
+
+@media (max-width: 380px) {
+
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pricing-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .section-heading h1 {
+        font-size: 22px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    .pricing-card {
+        padding: 22px 18px;
+    }
+
+    .filters {
+        gap: 5px;
+    }
+
+    .filter-btn {
+        padding: 7px 13px;
+        font-size: 10px;
+    }
+
+    .billing-wrapper {
+        gap: 6px;
+    }
+
+    .billing-label {
+        font-size: 11px;
+    }
+
+    .save-badge {
+        display: none;
+    }
+
+    .price-value {
+        font-size: 32px;
+    }
+}
+```

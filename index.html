@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plans & Pricing - Paras Qureshi</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+         Plans & Pricing
+        </div>
+
+        <p>Choose the perfect plan for your needs</p>
+    </header>
+
+
+    <!-- Pricing Section -->
+    <main class="pricing-section">
+
+        <div class="section-heading">
+            <span>PRICING PLANS</span>
+            <h1>Simple plans. Powerful features.</h1>
+            <p>Choose a plan that works best for you.</p>
+        </div>
+
+
+        <!-- Billing Toggle -->
+        <div class="billing-wrapper">
+
+            <span id="monthlyLabel" class="billing-label active-label">
+                Monthly
+            </span>
+
+            <label class="toggle">
+                <input type="checkbox" id="billingToggle">
+                <span class="slider"></span>
+            </label>
+
+            <span id="yearlyLabel" class="billing-label">
+                Yearly
+            </span>
+
+            <span class="save-badge">Save 20%</span>
+
+        </div>
+
+
+        <!-- Category Filters -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="basic">
+                Basic
+            </button>
+
+            <button class="filter-btn" data-filter="premium">
+                Premium
+            </button>
+
+        </div>
+
+
+        <!-- Pricing Cards -->
+        <div class="pricing-grid">
+
+
+            <!-- Basic -->
+            <div class="pricing-card" data-category="basic">
+
+                <div class="card-icon basic-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <h2>Starter</h2>
+
+                <p class="card-description">
+                    Perfect for individuals getting started.
+                </p>
+
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="price-value"
+                          data-monthly="9"
+                          data-yearly="7">
+                        9
+                    </span>
+                    <span class="period">/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        5 Projects
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        5 GB Storage
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Basic Analytics
+                    </li>
+
+                    <li class="disabled">
+                        <i class="fa-solid fa-xmark"></i>
+                        Priority Support
+                    </li>
+                </ul>
+
+                <button class="cta-btn">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Basic / Standard -->
+            <div class="pricing-card" data-category="basic">
+
+                <div class="card-icon standard-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <h2>Growth</h2>
+
+                <p class="card-description">
+                    Great for growing projects and small teams.
+                </p>
+
+                <div class="price">
+                    <span class="currency">$</span>
+
+                    <span class="price-value"
+                          data-monthly="19"
+                          data-yearly="15">
+                        19
+                    </span>
+
+                    <span class="period">/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        15 Projects
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        25 GB Storage
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Advanced Analytics
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Email Support
+                    </li>
+                </ul>
+
+                <button class="cta-btn">
+                    Choose Plan
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Premium -->
+            <div class="pricing-card popular" data-category="premium">
+
+                <div class="popular-badge">
+                    <i class="fa-solid fa-star"></i>
+                    Most Popular
+                </div>
+
+                <div class="card-icon premium-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+                <h2>Professional</h2>
+
+                <p class="card-description">
+                    Advanced tools for professionals and teams.
+                </p>
+
+                <div class="price">
+                    <span class="currency">$</span>
+
+                    <span class="price-value"
+                          data-monthly="39"
+                          data-yearly="31">
+                        39
+                    </span>
+
+                    <span class="period">/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Unlimited Projects
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        100 GB Storage
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Advanced Analytics
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Priority Support
+                    </li>
+                </ul>
+
+                <button class="cta-btn popular-btn">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Premium -->
+            <div class="pricing-card" data-category="premium">
+
+                <div class="card-icon enterprise-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <h2>Enterprise</h2>
+
+                <p class="card-description">
+                    Complete solution for large organizations.
+                </p>
+
+                <div class="price">
+                    <span class="currency">$</span>
+
+                    <span class="price-value"
+                          data-monthly="69"
+                          data-yearly="55">
+                        69
+                    </span>
+
+                    <span class="period">/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Unlimited Projects
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        500 GB Storage
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Premium Analytics
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        24/7 Support
+                    </li>
+                </ul>
+
+                <button class="cta-btn">
+                    Contact Us
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Plans & Pricing. Designed by Paras Qureshi.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
